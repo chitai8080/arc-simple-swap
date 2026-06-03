@@ -1,11 +1,14 @@
 import cors from "cors";
 import express from "express";
-import { default as helmet } from "helmet";
+import * as helmetImport from "helmet";
 import { rateLimit } from "express-rate-limit";
 import { env } from "./config/env.js";
 import { logger } from "./config/logger.js";
 import { createSwapRouter } from "./modules/swap/swap.routes.js";
 import { errorHandler, notFoundHandler } from "./middleware/errorHandler.js";
+
+const helmet =
+  (helmetImport as { default?: unknown }).default ?? (helmetImport as unknown);
 
 export function createApp() {
   const app = express();
@@ -38,7 +41,7 @@ export function createApp() {
     next();
   });
 
-  app.use(helmet());
+  app.use((helmet as (options?: unknown) => express.RequestHandler)());
   app.use(cors({ origin: env.WEB_ORIGIN, methods: ["GET", "POST"] }));
   app.use(express.json({ limit: "100kb" }));
 
