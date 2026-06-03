@@ -1,7 +1,7 @@
 import cors from "cors";
 import express from "express";
-import helmet from "helmet";
-import rateLimit from "express-rate-limit";
+import { default as helmet } from "helmet";
+import { rateLimit } from "express-rate-limit";
 import { env } from "./config/env.js";
 import { logger } from "./config/logger.js";
 import { createSwapRouter } from "./modules/swap/swap.routes.js";
