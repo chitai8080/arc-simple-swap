@@ -1,0 +1,12 @@
+{
+  "name": "arc-swap-simple",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix web run dev\"",
+    "build": "npm --prefix server run build && npm --prefix web run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

@@ -1,0 +1,172 @@
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 42px 16px 60px;
+  display: grid;
+  gap: 18px;
+}
+
+.header {
+  padding: 4px 8px 10px;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 8px 0 10px;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.06;
+}
+
+h2 {
+  margin: 0 0 12px;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--surface), var(--surface-strong));
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 22px rgba(16, 24, 32, 0.06);
+}
+
+.muted {
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+
+.actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 12px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+input,
+select,
+button {
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  font: inherit;
+}
+
+input,
+select {
+  padding: 10px 12px;
+  background: #ffffff;
+}
+
+button {
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+button:hover:enabled {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+button.danger {
+  background: #ffffff;
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+.warning {
+  color: var(--warn);
+  margin: 8px 0 0;
+}
+
+.status-card {
+  font-family: var(--font-mono);
+}
+
+.status-line {
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #9fb2be;
+}
+
+.status-dot.loading {
+  background: var(--warn);
+}
+
+.status-dot.success {
+  background: var(--ok);
+}
+
+.status-dot.error {
+  background: var(--err);
+}
+
+.result-grid p,
+.error-text {
+  margin: 0 0 10px;
+  word-break: break-all;
+}
+
+.error-text {
+  color: var(--err);
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 28px 12px 36px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

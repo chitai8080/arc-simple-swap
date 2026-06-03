@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "swap-tokens": {
+      "source": "circlefin/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/circle/skills/swap-tokens/SKILL.md",
+      "computedHash": "f14114fadd2fb090dd9e454c70d128b64bcc2457aedb72625ce8112b4873d44f"
+    },
+    "use-arc": {
+      "source": "circlefin/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/circle/skills/use-arc/SKILL.md",
+      "computedHash": "dfd429962197a08347f150c058ec0ae3294ea03facd545ec2b0a84a27eb98564"
+    },
+    "use-usdc": {
+      "source": "circlefin/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/circle/skills/use-usdc/SKILL.md",
+      "computedHash": "63bfcf3764e8e1e596c0196790d13f37d98291b67019f369f21c938ca7839d11"
+    }
+  }
+}
